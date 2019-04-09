@@ -76,7 +76,7 @@
 						src="http://img.smedunia.in/sites/default/files/products/image/457698/Cook.jpg"
 						class="image" style="width: 100%" alt="Image">
 					<div class="middle">
-						<div class="text"><a href='<c:url value="/getAllCook"></c:url>'>Cook</a></div>
+						<div class="text"><a href='<c:url value="/getAllKhachHang"></c:url>'>Cook</a></div>
 					</div>
 				</div>
 			</div>
