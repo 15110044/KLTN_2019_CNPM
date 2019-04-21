@@ -9,16 +9,13 @@
 		<version>2.2.0.BUILD-SNAPSHOT</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.project</groupId>
-	<artifactId>BackendRepairs</artifactId>
+	<groupId>com</groupId>
+	<artifactId>Repairment</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>BackendRepairs</name>
-	<packaging>jar</packaging>
-	<description>BackendRepairs project for Spring Boot</description>
+	<name>Repairment</name>
+	<description>Repairment project for Spring Boot</description>
 
 	<properties>
-	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 	</properties>
 
