@@ -29,21 +29,21 @@ public class KhachHangDAO {
 		
 	}
 	
-//	public Cook add(Cook cook){
+//	public KhachHang post(KhachHang khachhang){
 //		Session session = this.sessionFactory.getCurrentSession();
-//		session.persist(cook);
-//		return cook;
+//		session.persist(khachhang);
+//		return khachhang;
 //	}
-//	public Cook getCook(int id){
+//	public KhachHang getKhachHang(int id){
 //		Session session = this.sessionFactory.getCurrentSession();
-//		Cook cook = (Cook) session.get(Cook.class, new Integer(id));
-//		return cook;
+//		KhachHang khachhang = (KhachHang) session.get(KhachHang.class, new Integer(1));
+//		return khachhang;
 //	}
-//	public void updateCook(Cook cook){
+//	public void updateKhachHang(KhachHang khachhang){
 //		Session session = this.sessionFactory.getCurrentSession();
-//		session.update(cook);
+//		session.update(khachhang);
 //	}
-//
+
 //	public int isValid(String username,byte[] password){
 //		Session session = this.sessionFactory.getCurrentSession();
 //		Query query = session.createQuery("from Cook where firstname = :fname and password = :pass");

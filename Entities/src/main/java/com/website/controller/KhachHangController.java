@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.website.model.KhachHang;
+import com.website.model.YeuCau;
 import com.website.service.KhachHangService;
 
 
@@ -30,26 +31,26 @@ public class KhachHangController {
 //	ProductService productservice;
 
 	@RequestMapping(value = "/getAllKhachHang", method = RequestMethod.GET)
-	public @ResponseBody List<KhachHang> getAllCook(Model model) {
+	public @ResponseBody List<KhachHang> getAllKhachHang(Model model) {
 		List<KhachHang> loc = khachhangservice.getAllKhachHang();
 //		model.addAttribute("loc", loc);
 		return loc;
 	}
 
-//	@RequestMapping(value = "/newCook", method = RequestMethod.GET)
-//	public String viewAddCook(Model model) {
-//		Cook cook = new Cook();
-//		model.addAttribute("cook", cook);
-//		return "addCook";
+	@RequestMapping(value = "/postNew", method = RequestMethod.GET)
+	public String viewPostNew(Model model) {
+		KhachHang khachhang = new KhachHang();
+		model.addAttribute("khachhang", khachhang);
+		return "postNew";
+
+	}
 //
-//	}
-//
-//	@RequestMapping(value = "/getCook/{id}", method = RequestMethod.GET, headers = "Accept=application/json")
-//	public String getCook(@PathVariable int id,Model model) {
-//		Cook cook = cookservice.getCook(id);
-//		List<Product> products = cook.getProducts();
-//		model.addAttribute("cook", cook);
-//		model.addAttribute("lop", products);
+//	@RequestMapping(value = "/getKhachHang/{id}", method = RequestMethod.GET, headers = "Accept=application/json")
+//	public String getKhachHang(@PathVariable int id,Model model) {
+//		KhachHang khachhang = khachhangservice.getKhachHang(id);
+//		List<YeuCau> dsyc = khachhang.getDsyc();
+//		model.addAttribute("khachhang", khachhang);
+//		model.addAttribute("lodsyc", dsyc);
 //		return "cookDetail";
 //	}
 //	

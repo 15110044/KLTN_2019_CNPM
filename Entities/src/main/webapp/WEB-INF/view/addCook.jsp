@@ -24,7 +24,7 @@
 
 	<div class="container">
 
-		<form class="form-horizontal" action='addCook' method="POST"
+		<form class="form-horizontal" action='postNew' method="POST"
 			modelAttribute="cook" enctype="multipart/form-data">
 			<fieldset>
 				<div id="legend">
@@ -33,13 +33,13 @@
 				<div class="row">
 					<div class="col-sm-1">
 						<input id="cookID" type="hidden" name="cookID"
-							value="${cook.idCook} ">
+							value="${khachhang.makh} ">
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-sm-1">
 						<!-- Avatar -->
-						<label class="control-label" for="avatar">Avatar</label> <img
+						<label class="control-label" for="avatar">Hinh yeu cau</label> <img
 							id="avatar"
 							src="https://s3.amazonaws.com/hotmatcher/member/125125/album/profile/1.jpg"
 							class="img-circle">
@@ -111,7 +111,7 @@
 						</div>
 						<!-- Button -->
 						<div class="controls">
-							<button class="btn btn-success">Save</button>
+							<button class="btn btn-success">Post</button>
 						</div>
 					</div>
 					<div class="col-sm-6">

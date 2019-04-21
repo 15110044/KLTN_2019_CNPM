@@ -22,17 +22,17 @@ public class KhachHangService {
 	}
 	
 //	@Transactional
-//	public void addCook(Cook cook){
-//		cookdao.add(cook);
+//	public void khachhangPost(KhachHang khachhang){
+//		khachhangdao.post(khachhang);
 //	}
 //	@Transactional
-//	public Cook getCook(int id){
-//		return cookdao.getCook(id);
+//	public KhachHang getKhachHang(int id){
+//		return khachhangdao.getKhachHang(id);
 //	}
 //	
 //	@Transactional
-//	public void updateCook(Cook cook){
-//		cookdao.updateCook(cook);
+//	public void updateKhachHang(KhachHang khachhang){
+//		khachhangdao.updateKhachHang(khachhang);
 //	}
 //	@Transactional
 //	public int isCookValid(String username,byte[] password){
