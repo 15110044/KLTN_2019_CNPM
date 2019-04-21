@@ -1,0 +1,62 @@
+CREATE DATABASE  IF NOT EXISTS `repairment` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `repairment`;
+-- MySQL dump 10.13  Distrib 5.7.17, for Win64 (x86_64)
+--
+-- Host: localhost    Database: repairment
+-- ------------------------------------------------------
+-- Server version	5.7.22-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `yeucau`
+--
+
+DROP TABLE IF EXISTS `yeucau`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `yeucau` (
+  `MAYEUCAU` int(11) NOT NULL AUTO_INCREMENT,
+  `DIACHI` varchar(100) DEFAULT NULL,
+  `GHICHU` varchar(100) DEFAULT NULL,
+  `NGAYYEUCAU` varchar(100) DEFAULT NULL,
+  `TINHTRANG` varchar(100) DEFAULT NULL,
+  `MAKH` int(11) NOT NULL,
+  `MADVCC` int(11) NOT NULL,
+  PRIMARY KEY (`MAYEUCAU`),
+  KEY `FK_8osa575id6pv98t6ke1gelckr` (`MAKH`),
+  KEY `FK_noajlk12rumk01tle2knekvax` (`MADVCC`),
+  CONSTRAINT `FK_8osa575id6pv98t6ke1gelckr` FOREIGN KEY (`MAKH`) REFERENCES `khachhang` (`MAKH`),
+  CONSTRAINT `FK_noajlk12rumk01tle2knekvax` FOREIGN KEY (`MADVCC`) REFERENCES `dichvucungcap` (`MADVCC`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `yeucau`
+--
+
+LOCK TABLES `yeucau` WRITE;
+/*!40000 ALTER TABLE `yeucau` DISABLE KEYS */;
+INSERT INTO `yeucau` VALUES (1,'123abc','hhhhh','22/1/2019','chuabaogia',1,2),(2,'456xyz','kkkkkk','23/1/2019','dabaogia',2,1),(3,'789rut','llllll','23/1/2019','chuabaogia',1,3);
+/*!40000 ALTER TABLE `yeucau` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2019-04-09 19:49:41
