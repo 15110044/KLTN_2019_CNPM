@@ -28,20 +28,21 @@ public class DichVuCungCap implements Serializable {
 	private int maDVCC;
 	private String tenDV;
 	private List<YeuCau> dsyc = new ArrayList();
-	private List<HinhYeuCau> hyc= new ArrayList();
-	
+	private List<HinhYeuCau> hyc = new ArrayList();
+	private List<ThoDV> thoDV = new ArrayList();
+
 	public DichVuCungCap() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	public DichVuCungCap(int maDVCC, String tenDV,List<YeuCau> dsyc,List<HinhYeuCau> hyc) {
+
+	public DichVuCungCap(int maDVCC, String tenDV, List<YeuCau> dsyc, List<HinhYeuCau> hyc, List<ThoDV> thoDV) {
 
 		this.maDVCC = maDVCC;
 		this.tenDV = tenDV;
 		this.dsyc = dsyc;
-		this.hyc=hyc;
+		this.hyc = hyc;
+		this.thoDV = thoDV;
 	}
-
 
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
@@ -53,7 +54,7 @@ public class DichVuCungCap implements Serializable {
 	public void setMaDVCC(int maDVCC) {
 		this.maDVCC = maDVCC;
 	}
-	
+
 	@Column(name = "TENDV", length = 500)
 	public String getTenDV() {
 		return tenDV;
@@ -61,8 +62,8 @@ public class DichVuCungCap implements Serializable {
 
 	public void setTenDV(String tenDV) {
 		this.tenDV = tenDV;
-	}	
-	
+	}
+
 	@OneToMany(mappedBy = "dichvucungcap")
 	@LazyCollection(LazyCollectionOption.FALSE)
 	public List<YeuCau> getDsyc() {
@@ -72,7 +73,7 @@ public class DichVuCungCap implements Serializable {
 	public void setDsyc(List<YeuCau> dsyc) {
 		this.dsyc = dsyc;
 	}
-	
+
 	@OneToMany(mappedBy = "dichvucungcap")
 	@LazyCollection(LazyCollectionOption.FALSE)
 	public List<HinhYeuCau> getHyc() {
@@ -81,5 +82,14 @@ public class DichVuCungCap implements Serializable {
 
 	public void setHyc(List<HinhYeuCau> hyc) {
 		this.hyc = hyc;
+	}
+	@OneToMany(mappedBy = "dichvucungcap")
+	@LazyCollection(LazyCollectionOption.FALSE)
+	public List<ThoDV> getThoDV() {
+		return thoDV;
+	}
+
+	public void setThoDV(List<ThoDV> thoDV) {
+		this.thoDV = thoDV;
 	}
 }
